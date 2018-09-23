@@ -27,7 +27,7 @@ namespace AniGameLib
             }
 
         }
-
+       
         public List<Frame> Frames { get; set; }
 
         int currentIndex = 0;
@@ -35,11 +35,20 @@ namespace AniGameLib
         TimeSpan elapsedTime = TimeSpan.Zero;
         TimeSpan updateTime; 
 
-        public AnimatedSprite()
+        public AnimatedSprite(Texture2D image, Vector2 position,Color tint, List<Frame> frames, Vector2 scale, int animationSpeed)
+        {
+            Image = image;
+            Position = position;
+            Tint = tint;
+            Frames = frames;
+            Scale = scale;
+            
+            updateTime = TimeSpan.FromMilliseconds(animationSpeed);
+        }
+
+        public void Animate(GameTime gameTime)
         {
 
         }
-
-        
     }
 }

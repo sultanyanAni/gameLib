@@ -45,7 +45,7 @@ namespace AniGameLib
 
         }
 
-        public Sprite(Texture2D image, Vector2 position, Color tint, Vector2 scale, float rotation, float layerDepth, SpriteEffects spriteEffect, Vector2 origin, Rectangle? sourceRectangle)
+        public Sprite(Texture2D image, Vector2 position, Color tint, Vector2 scale, float rotation, float layerDepth, SpriteEffects spriteEffect, Vector2 origin, Rectangle? sourceRectangle = null)
         {
             Image = image;
             Position = position;
@@ -55,6 +55,7 @@ namespace AniGameLib
             LayerDepth = layerDepth;
             Origin = origin;
             SpriteEffect = spriteEffect;
+            SourceRectangle = sourceRectangle;
         }
 
         public void Draw(SpriteBatch sb)
